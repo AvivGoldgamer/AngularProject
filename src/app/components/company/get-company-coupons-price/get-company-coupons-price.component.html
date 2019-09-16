@@ -1,0 +1,34 @@
+<div>
+
+        <input type="number" [(ngModel)]="price"><br>
+
+        <input type="button" value="change" (click)="getCompanyCouponsPrice()"><br><br>
+
+        <table>
+    
+            <tr>
+                <th>title</th>
+                <th>category</th>
+                <th>description</th>
+                <th>startDate</th>
+                <th>endDate</th>
+                <th>amount</th>
+                <th>price</th>
+                <th>image</th>
+            </tr>
+            
+            <tr *ngFor="let coupon of coupons">
+                <td>{{coupon.title}}</td>
+                <td>{{coupon.category}}</td>
+                <td>{{coupon.description}}</td>
+                <td>{{coupon.startDate}}</td>
+                <td>{{coupon.endDate}}</td>
+                <td>{{coupon.amount}}</td>
+                <td>{{coupon.price}}</td>
+                <td>{{coupon.image}}</td>
+    
+            </tr>
+    
+        </table>
+         
+    </div>

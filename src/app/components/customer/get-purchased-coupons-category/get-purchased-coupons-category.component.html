@@ -1,0 +1,45 @@
+<div>
+
+    <table>
+        <select name="type" [(ngModel)]="category">
+            <option value="restaurant">Restaurant</option>
+            <option value="hotel">Hotel</option>
+            <option value="spa">Spa</option>
+            <option value="food">Food</option>
+            <option value="flight">Flight</option>
+            <option value="shopping">Shopping</option>
+            <option value="sales">Sales</option>
+            <option value="attraction">Attraction</option>
+            <option value="trips">Trips</option>
+            <option value="zimmers">Zimmers</option>
+            restaurant, hotel, spa, flight, food, sales , shopping, attraction, trips, zimmers
+        </select>
+
+        <input type="button" value="change" (click)="getCustomerCouponsCategory()">
+
+        <tr>
+            <th>title</th>
+            <th>category</th>
+            <th>description</th>
+            <th>startDate</th>
+            <th>endDate</th>
+            <th>amount</th>
+            <th>price</th>
+            <th>image</th>
+        </tr>
+        
+        <tr *ngFor="let coupon of coupons">
+            <td>{{coupon.title}}</td>
+            <td>{{coupon.category}}</td>
+            <td>{{coupon.description}}</td>
+            <td>{{coupon.startDate}}</td>
+            <td>{{coupon.endDate}}</td>
+            <td>{{coupon.amount}}</td>
+            <td>{{coupon.price}}</td>
+            <td>{{coupon.image}}</td>
+
+        </tr>
+
+    </table>
+     
+</div>

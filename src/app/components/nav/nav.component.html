@@ -1,0 +1,57 @@
+<div>
+
+    <div *ngIf="notLogged">
+
+        <a routerLink="home">Home</a>
+        <a routerLink="coupons">Coupons</a>
+        <a routerLink="about">About</a>
+        <a routerLink="contact">Contact us</a>
+        <a routerLink="register">Register</a>
+
+    </div>
+
+    <div *ngIf = "admin">
+
+        <a routerLink="home">Home</a>
+        <a routerLink="coupons">Coupons</a>
+        <a routerLink="about">About</a>
+        <a routerLink="contact">Contact us</a>
+
+        <h2>Company:</h2><br>
+
+        <a routerLink="addComp">Add Company</a>
+        <a routerLink="companies">Companies</a>
+
+        <h2>Customer:</h2><br>
+
+        <a routerLink="addCust">Add Customer</a>
+        <a routerLink="customers">Customers</a>
+        
+        
+
+    </div>
+
+    <div *ngIf = "company">
+
+        <a routerLink="home">Home</a>
+        <a routerLink="coupons">Coupons</a>
+        <a routerLink="about">About</a>
+        <a routerLink="contact">Contact us</a>
+
+        <a routerLink="addCoup">Add Coupon</a>
+        <a routerLink="getCompCoup">Your Coupons</a>
+
+    </div>
+
+    <div *ngIf = "customer">
+
+        <a routerLink="home">Home</a>
+        <a routerLink="coupons">Coupons</a>
+        <a routerLink="about">About</a>
+        <a routerLink="contact">Contact us</a>
+
+        <a routerLink="getPurchasedCoupons">Your Coupons</a>
+
+    </div>
+    
+</div>

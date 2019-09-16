@@ -1,0 +1,11 @@
+<div>
+
+    <h1 *ngIf="type == 'Administrator' || type == 'Company' || type == 'Customer'">welcome, Dear {{type}}</h1>
+
+    <h1 *ngIf="type == 'notLogged'">Please register</h1>
+
+    <input class="btn" type="button" value="Log Out" *ngIf="type == 'Administrator' || type == 'Company' || type == 'Customer'" (click)="logoutButton()">
+
+    <input class="btn" type="button" value="Log In" *ngIf="type == 'notLogged'" (click)="loginButton()">
+
+</div>

@@ -1,0 +1,16 @@
+<div>
+
+    <form>
+
+        <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="customer.firstName" /> <span #cFName [ngStyle]="{color : 'Red'}"></span> <br> <br>
+        <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="customer.lastName" /> <span #cLName [ngStyle]="{color : 'Red'}"></span> <br> <br>
+        <input type="text" name="custEmail" placeholder="Email" [(ngModel)]="customer.email" /> <span #cEmail [ngStyle]="{color : 'Red'}"></span> <br> <br>
+        <input type="text" name="custPass" placeholder="Password" [(ngModel)]="customer.password" /> <span #cPass [ngStyle]="{color : 'Red'}"></span> <br> <br>
+
+        <input type="button" value="Create Customer" (click)="createCustomer()" />
+
+    </form>
+
+</div>
+
+

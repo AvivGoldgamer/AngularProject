@@ -1,0 +1,35 @@
+<div>
+
+    <table *ngIf="coupons">
+
+        <tr>
+
+            <th>Title</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Upload Date</th>
+            <th>Expiration Date</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th *ngIf="type === 'Customer'">Purchase</th>
+
+        </tr>
+        
+        <tr *ngFor="let coupon of coupons">
+
+            <td>{{coupon.title}}</td>
+            <td>{{coupon.category}}</td>
+            <td>{{coupon.description}}</td>
+            <td>{{coupon.startDate}}</td>
+            <td>{{coupon.endDate}}</td>
+            <td>{{coupon.amount}}</td>
+            <td>{{coupon.price}}</td>
+            <td>{{coupon.image}}</td>
+            <td class="customButton" (click)="purchaseCoupon(coupon)" *ngIf="type === 'Customer'">Purchase</td>
+
+        </tr>
+
+    </table>
+     
+</div>

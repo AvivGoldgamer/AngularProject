@@ -1,0 +1,60 @@
+<div>
+
+        <input type="text" placeholder="Write 'Confirm' to delete" [(ngModel)]="confirmed"><br>
+
+        <input type="button" value="All" (click)="changeToAll()"><br><br>
+
+        <select name="type" [(ngModel)]="category">
+                <option value="restaurant">Restaurant</option>
+                <option value="hotel">Hotel</option>
+                <option value="spa">Spa</option>
+                <option value="food">Food</option>
+                <option value="flight">Flight</option>
+                <option value="shopping">Shopping</option>
+                <option value="sales">Sales</option>
+                <option value="attraction">Attraction</option>
+                <option value="trips">Trips</option>
+                <option value="zimmers">Zimmers</option>
+                restaurant, hotel, spa, flight, food, sales , shopping, attraction, trips, zimmers
+            </select><br>
+
+        <input type="button" value="By Category" (click)="changeToCategory()"><br><br>
+
+        <input type="number" [(ngModel)]="price"><br>
+        <input type="button" value="By max Price" (click)="changeToPrice()">
+        
+
+
+        <table *ngIf="coupons">
+    
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Uploaded</th>
+                <th>Expires</th>
+                <th>Amount</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Update button</th>
+                <th>Delete button</th>
+
+            </tr>
+            
+            <tr *ngFor="let coupon of coupons">
+                <td>{{coupon.title}}</td>
+                <td>{{coupon.category}}</td>
+                <td>{{coupon.description}}</td>
+                <td>{{coupon.startDate}}</td>
+                <td>{{coupon.endDate}}</td>
+                <td>{{coupon.amount}}</td>
+                <td>{{coupon.price}}</td>
+                <td>{{coupon.image}}</td>
+                <td class="customButton" (click)="updateCoupon(coupon)">Update</td>
+                <td class="customButton" (click)="deleteCoupon(coupon)">Delete</td>
+    
+            </tr>
+    
+        </table>
+         
+    </div>

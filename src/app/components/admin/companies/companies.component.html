@@ -1,0 +1,32 @@
+<div>
+
+    <input type="text" placeholder="Write 'Confirm' to delete" [(ngModel)]="confirmed"><br>
+
+
+    <table *ngIf="companies">
+
+        <tr>
+
+            <th>Company Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Update button</th>
+            <th>Delete button</th>
+            
+        </tr>
+        
+        <tr *ngFor="let company of companies">
+
+            <td>{{company.compName}}</td>
+            <td>{{company.email}}</td>
+            <td>{{company.password}}</td>
+            <td class="customButton" (click)="updateCompany(company)">Update</td>
+            <td class="customButton" (click)="deleteCompany(company)">Delete</td>
+
+        </tr>
+
+    </table>
+
+
+     
+</div>

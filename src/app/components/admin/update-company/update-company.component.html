@@ -1,0 +1,15 @@
+<div>
+
+    <form>
+
+        <span>Email: </span>  <input type="text" name="compEmail" [(ngModel)]="company.email" /> <span #cEmail [ngStyle]="{color : 'Red'}"></span><br><br>
+        <span>Password: </span>  <input type="text" name="compPass" [(ngModel)]="company.password" /> <span #cPass [ngStyle]="{color : 'Red'}"></span><br><br>
+        
+        <input type="button" value="Update Company" (click)="updateCompany()" />
+
+        
+
+    </form>
+
+</div>
+

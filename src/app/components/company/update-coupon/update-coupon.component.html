@@ -1,0 +1,31 @@
+<div>
+    <form>
+
+        Coupon Description: <br/> <input type="text" name="coupDesc" placeholder="Coupon Description" [(ngModel)]="coupon.description"/><br/>
+        Coupon Category:<br/> <select name="type" [(ngModel)]="coupon.category">
+            <option value="restaurant">Restaurant</option>
+            <option value="hotel">Hotel</option>
+            <option value="spa">Spa</option>
+            <option value="food">Food</option>
+            <option value="flight">Flight</option>
+            <option value="shopping">Shopping</option>
+            <option value="sales">Sales</option>
+            <option value="attraction">Attraction</option>
+            <option value="trips">Trips</option>
+            <option value="zimmers">Zimmers</option>
+            restaurant, hotel, spa, flight, food, sales , shopping, attraction, trips, zimmers
+        </select>
+        <br/>
+        
+        
+     
+        Coupon Title:    <br/><input type="title" name="title" placeholder="coupon Title" [(ngModel)]="coupon.title"/><br/>
+        Coupon Price:    <br/><input type="number" name="price" placeholder="coupon Price" [(ngModel)]="coupon.price"/><br/>
+        Coupon image:   <br/> <input type="string" name="image" placeholder="coupon Image" [(ngModel)]="coupon.image"/><br/>
+        Coupon amount:   <br/> <input type="number" name="amount" placeholder="coupon Amount" [(ngModel)]="coupon.amount"/><br/>
+        Start Date:      <br/><input type="date" name="startDate"  [(ngModel)]="coupon.startDate" /><br/>
+        End Date:        <br/><input type="date" name="endDate"  [(ngModel)]="coupon.endDate" /><br/>
+        <input type="button" value="Update Coupon" (click)="updateCoupon()" /><br/>
+        
+    </form>
+</div>

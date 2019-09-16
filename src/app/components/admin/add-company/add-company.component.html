@@ -1,0 +1,13 @@
+<div>
+
+    <form>
+
+        <input type="text" name="compName" placeholder="Company Name" [(ngModel)]="company.compName" /> <span #cName [ngStyle]="{color : 'Red'}"></span> <br> <br>
+        <input type="text" name="compEmail" placeholder="Company Email" [(ngModel)]="company.email" /> <span #cEmail [ngStyle]="{color : 'Red'}"></span> <br> <br>
+        <input type="text" name="compPass" placeholder="Company Password" [(ngModel)]="company.password" /> <span #cPass [ngStyle]="{color : 'Red'}"></span> <br> <br>
+
+        <input type="button" value="Create Company" (click)="createCompany()" />
+
+    </form>
+
+</div>

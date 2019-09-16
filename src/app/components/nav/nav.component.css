@@ -1,0 +1,19 @@
+a {
+    display: block;
+    margin: 5px;
+    background-color: #6b9e1a;
+    padding: 20px;
+    border-radius: 5px;
+    /*text-align: center;*/
+    text-decoration: none;
+    color: #353636;
+    font-size: 25px;
+   
+
+}
+
+a:hover{
+
+    background-color: #446b14;
+
+}

@@ -1,0 +1,43 @@
+#main{
+
+    background-color: #222629;;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 75% 10%;
+    grid-template-columns: 15% 70% 15%;
+
+}
+
+div>* {
+
+    border: 1px solid black;
+    
+}
+
+header {
+
+    grid-column: span 3;
+
+}
+
+footer {
+
+    grid-column: span 3;
+
+}
+
+main {
+
+    overflow: auto;
+
+}
+
+nav{
+
+    overflow: auto;
+
+}
+
+
+
+

@@ -1,0 +1,32 @@
+<div>
+    <h1>Login</h1>
+
+    <form action="customer/login">
+
+    <div>
+
+        <div style="width: 100%">
+
+            <input #textEmail type="text" placeholder="Email" name="email" id="email" [(ngModel)] = "loginObj.email" [ngClass] = "'textInputs'" style="float: left">
+            <span #errSpanEmail style="float: left; font-size: 22px; padding-left: 2px"></span>
+            
+            <span #errSpanPassword style="float: right; font-size: 22px; padding-left: 2px"></span>
+            <input #textPassword type="text" placeholder="Password" name="password" id="password" [(ngModel)] = "loginObj.password" [ngClass] = "'textInputs'" style="float: right">
+            
+
+        </div><br><br><br>
+
+        <span #spanCust [ngClass]="['typesSpan', 'leftRadius']" (click)="changeBG(1)">Customer</span>
+        <span #spanComp [ngClass]="'typesSpan'" (click)="changeBG(2)">Company</span>
+        <span #spanAdmin [ngClass]="['typesSpan', 'rightRadius']" (click)="changeBG(3)">Admin</span>
+
+
+    </div> <br> <br> <br> <br>
+
+
+    <input [ngClass]="'btn'" type="button" value="Log In" (click)="login()"/>
+
+
+    </form>
+
+</div>
